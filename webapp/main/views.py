@@ -4,10 +4,10 @@ def index(request):
     return render(request, 'main/index.html')
 
 def cart(request):
-    return HttpResponse("<h4>Проверка корзины</h4>")
+    return render(request, 'main/cart.html')
 
 def catalog(request):
-    return HttpResponse("<h4>Проверка каталога</h4>")
+    return render(request, 'main/catalog.html')
 
 def about(request):
-    return HttpResponse("<h4>Проверка страницы о нас</h4>")
+    return render(request, 'main/about.html')
