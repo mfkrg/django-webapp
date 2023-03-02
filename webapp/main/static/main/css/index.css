@@ -21,5 +21,30 @@ aside .logo {
     font-size: 40px;
     margin-left: 10px;
     font-weight: bold;
+}
 
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: all .6s ease;
+}
+
+aside a{
+    text-decoration:none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.1);
 }
