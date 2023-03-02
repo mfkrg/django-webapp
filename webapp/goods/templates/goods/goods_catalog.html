@@ -5,7 +5,13 @@
 {% block content %}
     <div class="features">
         <h1>Товарные позиции</h1>
-        <p>Рандомный текста</p>
-        <button class="btn btn-warning">На страницу про нас</button>
+        <div class="grid">
+            {% for el in goods %}
+            <div class="alert alert-warning">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.cost }} руб.</p>
+            </div>
+        {% endfor %}
+        </div>
     </div>
 {% endblock %}
