@@ -17,10 +17,16 @@ class GalleryModelTest(TestCase):
         )
         image2.save()
 
+        image3 = Image(
+            title='Title 3',
+            image=File(open('gallery/test_images/iphone_x.jpg', 'rb'))
+        )
+        image3.save()
+
         all_images = Image.objects.all()
 
         #counttest
-        self.assertEqual(len(all_images), 2)
+        self.assertEqual(len(all_images), 3)
 
         #first one
         self.assertEqual(
@@ -38,4 +44,13 @@ class GalleryModelTest(TestCase):
 
         self.assertEqual(
             all_images[1].image, image2.image
+        )
+
+        #third one
+        self.assertEqual(
+            all_images[2].title, image3.title
+        )
+
+        self.assertEqual(
+            all_images[2].image, image3.image
         )
