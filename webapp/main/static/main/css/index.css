@@ -63,6 +63,11 @@ main .features {
 main .features h1 {font-size: 50px;}
 main .features p {max-width: 400px; margin: 20px auto}
 
+.alert-warning p {
+    color: gold;
+    text-align: right;
+}
+
 .alert-warning {
     background: #181818;
     color: #fff;
@@ -71,10 +76,7 @@ main .features p {max-width: 400px; margin: 20px auto}
     text-align: center;
 }
 
-.alert-warning p {
-    color: gold;
-    text-align: right;
-}
+
 
 .grid {
     padding-left: 75px;
@@ -83,4 +85,8 @@ main .features p {max-width: 400px; margin: 20px auto}
     grid-template-columns: 200px 200px 200px;
     grid-column-gap: 150px;
     grid-row-gap: 1em;
+}
+
+.goods_image{
+    width:150px;
 }
