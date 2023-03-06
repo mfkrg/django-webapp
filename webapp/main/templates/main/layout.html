@@ -12,16 +12,36 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
 </head>
 <body>
-    <aside>
-        <p><img src="{% static 'main/img/1976104.svg' %}" alt="logo" align="middle">Incoming</p>
-        <h3>Навигация</h3>
-        <ul>
+    <div class="topnav">
+        <div class="logo">
+            <p><img class="logophone" src="{% static 'main/img/1976104.svg' %}" alt="logo" align="middle" width="45" height="45">Incoming</p>
+
+        </div>
+        <div class="nav-buttons">
             <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>
             <a href="{% url 'goods_catalog' %}"><li><i class="fa-solid fa-mobile"></i> Каталог</li></a>
             <a href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i> Про нас</li></a>
             <a href="{% url 'cart' %}"><li><i class="fa-solid fa-cart-shopping"></i> Корзина</li></a>
-        </ul>
-    </aside>
+        </div>
+        <div class="auth_button">
+            <span style="color:white;">Авторизация</span>
+            <img class="svgauth" src="{% static 'main/img/auth.svg' %}" width="50" height="50" >
+        </div>
+        <div class="auth-menu">
+          <a href="#">Sign In</a>
+          <a href="#">Register</a>
+        </div>
+    </div>
+<!--    <aside>-->
+<!--        <p><img src="{% static 'main/img/1976104.svg' %}" alt="logo" align="middle">Incoming</p>-->
+<!--        <h3>Навигация</h3>-->
+<!--        <ul>-->
+<!--            <a href="{% url 'home' %}"><li><i class="fa-solid fa-house"></i> Главная</li></a>-->
+<!--            <a href="{% url 'goods_catalog' %}"><li><i class="fa-solid fa-mobile"></i> Каталог</li></a>-->
+<!--            <a href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i> Про нас</li></a>-->
+<!--            <a href="{% url 'cart' %}"><li><i class="fa-solid fa-cart-shopping"></i> Корзина</li></a>-->
+<!--        </ul>-->
+<!--    </aside>-->
     <main>
         {% block content %}
         {% endblock %}
