@@ -20,6 +20,7 @@ class Migration(migrations.Migration):
                 ('avail', models.IntegerField(verbose_name='Наличие')),
                 ('pic', models.CharField(max_length=100, verbose_name='Ссылка на фото')),
                 ('company', models.CharField(max_length=100, verbose_name='Производитель')),
+                ('image', models.ImageField(upload_to='images', default='iphone_x.jpg'))
             ],
         ),
     ]

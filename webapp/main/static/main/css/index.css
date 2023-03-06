@@ -151,7 +151,7 @@ main .features p {max-width: 400px; margin: 20px auto}
 
 
 .grid {
-    padding-left: 75px;
+    padding-left: 265px;
     padding-top: 20px;
     display: grid;
     grid-template-columns: 200px 200px 200px;

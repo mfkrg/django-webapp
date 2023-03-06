@@ -10,23 +10,7 @@
             <div class="alert alert-warning">
                 <h3>{{ el.title }}</h3>
                 <p>{{ el.cost }} руб.</p>
-                {% if el.title == 'Galaxy A10' %}
-                    <img class="goods_image" src="/media/images/samsung_galaxy_a10.jpg">
-                {% elif el.title == 'IPhone X' %}
-                    <img class="goods_image" src="/media/images/iphone_x.jpg">
-                {% elif el.title == 'IPhone XS' %}
-                    <img class="goods_image" src="/media/images/iphone_xs.jpg">
-                {% elif el.title == 'IPhone XR' %}
-                    <img class="goods_image" src="/media/images/iphone_xr.jpg">
-                {% elif el.title == 'Pixel 3' %}
-                    <img class="goods_image" src="/media/images/pixel_3.jpg">
-                {% elif el.title == 'Pixel 4' %}
-                    <img class="goods_image" src="/media/images/pixel_4.jpg">
-                {% elif el.title == 'IPhone 4S' %}
-                    <img class="goods_image" src="/media/images/iphone_4s.jpg">
-                {% elif el.title == 'Galaxy S20' %}
-                    <img class="goods_image" src="/media/images/galaxy_s20.jpg">
-                {% endif %}
+                <img class="goods_image" src="{{ el.image.url }}" width="300">
             </div>
         {% endfor %}
         </div>

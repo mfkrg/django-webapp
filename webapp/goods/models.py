@@ -6,6 +6,7 @@ class Goods(models.Model):
     avail = models.IntegerField('Наличие')
     pic = models.CharField('Ссылка на фото', max_length=100)
     company = models.CharField('Производитель', max_length= 100)
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.title
