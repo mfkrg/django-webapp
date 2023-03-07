@@ -31,6 +31,19 @@
           <a href="#">Sign In</a>
           <a href="#">Register</a>
         </div>
+        <div class ="filter-menu" style="background-color: #181818; position: absolute; border: 2px solid #FFFFFF; border-radius: 20px; left: 0; top: 120px; width: 200px; height: 60%; padding: 10px; padding-top: 150px;">
+            <h3 style="color: white; font-size: 22px; font-weight: bold;">Filtering Sidebar</h3>
+                <form>
+                    <label style="color: white; font-size: 18px;">Manufacturers</label>
+                    <select style="color: black; font-size: 14px;">
+                        <option value="manu1">Apple</option>
+                        <option value="manu2">Google</option>
+                        <option value="manu3">Samsung</option>
+                    </select>
+                    <label style="color: white; font-size: 18px;">Price Range</label>
+                    <input type="range" min="10" max="100" value="50" class="slider" id="priceRange" style="color: white; font-size: 14px;">
+                </form>
+        </div>
     </div>
 <!--    <aside>-->
 <!--        <p><img src="{% static 'main/img/1976104.svg' %}" alt="logo" align="middle">Incoming</p>-->

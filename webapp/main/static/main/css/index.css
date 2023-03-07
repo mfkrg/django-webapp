@@ -10,41 +10,66 @@ body {
     align-items: center;
     padding: 10px;
 }
-      /* Style for the logo and incoming text */
-      .logo {
-        display: flex;
-        align-items: center;
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        margin-left: 20px;
-      }
 
-      /* Style for the navigation buttons */
-      .nav-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-      }
+/* Логотип + текст */
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
 
-      .nav-button {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        font-weight: bold;
-      }
+/* Навигационные кнопки */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
 
-      .nav-button:hover {
-        background-color: #111;
-      }
+.nav-button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
 
-      /* Style for the authorization button */
+.nav-button:hover {
+    background-color: #111;
+}
+
+/* Кнопка авторизации */
 .auth-button {
 display: flex;
 align-items: center;
+}
+
+.filter-menu select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    color: #181818;
+    border: none;
+    border-radius: 5px;
+}
+
+.filter-menu label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.filter-menu h3 {
+  margin: 0 0 20px 0;
+}
+
+.filter-menu option {
+    background-color: #181818;
+    color: #FFFFFF;
 }
 
 .logophone {
