@@ -14,5 +14,18 @@
             </div>
         {% endfor %}
         </div>
+        <div class ="filter-menu">
+            <h3 style="color: white; font-size: 22px; font-weight: bold;">Фильтр товаров</h3>
+                <form>
+                    <label style="color: white; font-size: 18px;">Производитель</label>
+                    <select style="color: black; font-size: 14px;">
+                        <option value="manu1">Apple</option>
+                        <option value="manu2">Google</option>
+                        <option value="manu3">Samsung</option>
+                    </select>
+                    <label style="color: white; font-size: 18px;">Диапазон цен</label>
+                    <input type="range" min="10" max="100" value="50" class="slider" id="priceRange" style="color: white; font-size: 14px;">
+                </form>
+        </div>
     </div>
 {% endblock %}

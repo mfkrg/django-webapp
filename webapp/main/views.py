@@ -11,3 +11,9 @@ def catalog(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+def auth(request):
+    return render(request, 'main/auth.html')
+
+def register(request):
+    pass
