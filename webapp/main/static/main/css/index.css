@@ -107,14 +107,14 @@ align-items: center;
     cursor: pointer;
 }
 
-.auth-button-forgot[type="button"] {
+.auth-button-forgot[type="submit"] {
     background-color: #008CBA;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 200px;
+    width: 150px;
     float: right;
 }
 
