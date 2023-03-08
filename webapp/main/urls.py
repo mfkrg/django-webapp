@@ -6,5 +6,5 @@ urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),
     path('about/', views.about, name='about'),
     path('auth/', views.auth, name='auth'),
-    path('register', views.register_request, name='register')
+    path('register', views.register, name='register')
 ]

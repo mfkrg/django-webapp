@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import NewUserForm
-from django.contrib.auth import login
-from django.contrib import messages
+from django.contrib.auth import get_user_model, login
+from .forms import UserRegistrationForm
+
 def index(request):
     return render(request, 'main/index.html')
 
@@ -17,14 +17,27 @@ def about(request):
 def auth(request):
     return render(request, 'main/auth.html')
 
-def register_request(request):
+def register(request):
+    if request.user.is_authenticated:
+        return  redirect("main/index.html")
+
     if request.method == "POST":
-        form = NewUserForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "Регистрация успешна.")
-            return redirect("main:index")
-        messages.error(request, "Что-то пошло не так.")
-    form = NewUserForm()
-    return render(request=request, template_name="main/auth.html", context={"register_form":form})
+            return redirect("main/index.html")
+
+        else:
+            for error in list(form.errors.values()):
+                print(request, error)
+
+
+    else:
+        form = UserRegistrationForm()
+
+    return render(
+        request,
+        'main/auth.html',
+        context={"form": form}
+    )

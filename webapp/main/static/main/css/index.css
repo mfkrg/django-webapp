@@ -123,6 +123,24 @@ align-items: center;
     color: #FFFFFF;
 }
 
+.form-label {
+    color: white;
+}
+
+.content-section {
+    width: 600px;
+    margin: 50px auto;
+    border: 3px solid #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+.mb-4 {
+    text-align: center;
+    color: white;
+}
+
 .logophone {
     filter: invert(1) grayscale(100%) brightness(100%) sepia(0%) hue-rotate(0deg) saturate(0%);
 }
