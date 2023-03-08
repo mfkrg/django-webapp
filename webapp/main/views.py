@@ -19,14 +19,14 @@ def auth(request):
 
 def register(request):
     if request.user.is_authenticated:
-        return  redirect("main/index.html")
+        return redirect("home")
 
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect("main/index.html")
+            return redirect("home")
 
         else:
             for error in list(form.errors.values()):
