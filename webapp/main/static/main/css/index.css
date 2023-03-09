@@ -128,12 +128,42 @@ align-items: center;
 }
 
 .content-section {
+    background: #181818;
     width: 600px;
     margin: 50px auto;
     border: 3px solid #ffffff;
     padding: 20px;
     border-radius: 20px;
     color: white;
+    background: linear-gradient(334deg, #181818, #000000, #181830, #18b7ff) ;
+	background-size: 180% 180%;
+	animation: gradient-animation 12s ease infinite;
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+svg {
+    z-index:-1;
+    position: absolute;
+    width: 100vw;
+	height: 150vh;
+	box-sizing: border-box;
+	display: block;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	background-color: #0e4166;
+	background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
 }
 
 .mb-4 {
