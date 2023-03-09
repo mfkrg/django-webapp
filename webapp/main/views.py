@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import get_user_model, login, authenticate
+from django.contrib.auth import get_user_model, login, authenticate, logout
 from .forms import UserRegistrationForm
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
@@ -61,3 +61,8 @@ def login_request(request):
             messages.error(request, "Неправильный логин или пароль.")
     form = AuthenticationForm()
     return render(request, 'main/login.html', context={"login_form":form})
+
+def logout_request(request):
+    logout(request)
+    messages.info(request, "Вы успешно вышли.")
+    return redirect('home')

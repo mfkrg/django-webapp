@@ -23,14 +23,19 @@
             <a href="{% url 'about' %}"><li><i class="fa-solid fa-circle-info"></i> Про нас</li></a>
             <a href="{% url 'cart' %}"><li><i class="fa-solid fa-cart-shopping"></i> Корзина</li></a>
         </div>
-        <div class="auth_button">
-            <a class="auth-text-a" href="{% url 'auth' %}"><i class="fa-solid fa-person"></i> Авторизация</a>
-<!--            <img class="svgauth" src="{% static 'main/img/auth.svg' %}" width="50" height="50" >-->
-        </div>
-        <div class="auth-menu">
-          <a href="#">Sign In</a>
-          <a href="#">Register</a>
-        </div>
+        {% if user.is_authenticated %}
+
+            <div class="logout_button">
+                <a class="auth-text-a" href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Выйти</a>
+            </div>
+
+        {% else %}
+
+            <div class="auth_button">
+                <a class="auth-text-a" href="{% url 'auth' %}"><i class="fa-solid fa-person"></i> Авторизация</a>
+            </div>
+
+        {% endif %}
     </div>
 <!--    <aside>-->
 <!--        <p><img src="{% static 'main/img/1976104.svg' %}" alt="logo" align="middle">Incoming</p>-->
