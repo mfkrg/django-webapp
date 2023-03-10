@@ -45,6 +45,10 @@ body {
     background-color: #111;
 }
 
+.btn-login-from-reg{
+    text-align: center;
+}
+
 .form-groupbtnlogin {
     text-align: center;
     padding-bottom: 15px;
@@ -156,7 +160,9 @@ align-items: center;
 }
 
 .form-groupbtn{
+    padding-bottom: 15px;
     text-align:center;
+    padding-top: 15px;
 }
 
 @keyframes gradient-animation {
@@ -174,8 +180,8 @@ align-items: center;
 .as {
     z-index:-1;
     position: absolute;
-    width: 100vw;
-	height: 150vh;
+
+	height: 160vh;
 	box-sizing: border-box;
 	display: block;
 	background-size: cover;
