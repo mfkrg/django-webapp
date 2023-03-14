@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from .models import Goods, Cart
+from django.db import models
 from django.contrib.auth.models import User
 
 def goods_catalog(request):
@@ -7,7 +8,7 @@ def goods_catalog(request):
     return render(request, 'goods/goods_catalog.html', {'goods':goods})
 
 def cart(request):
-    cart = Cart.objects.all()
+    cart = Cart.objects.filter(user=request.user)
     return render(request, 'goods/cart.html', {'carts':cart})
 
 def add_to_cart(request, good_id):

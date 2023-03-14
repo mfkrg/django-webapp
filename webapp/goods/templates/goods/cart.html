@@ -4,8 +4,12 @@
 
 {% block content %}
 
-{% for cart in carts %}
-    хуй
-{% endfor %}
+<div class="grid">
+    {% for cart in carts %}
+        {{ cart.good.title }}
+        {{ cart.quantity }}
+        {{ cart.good.cost }}
+    {% endfor %}
+</div>
 
 {% endblock %}
