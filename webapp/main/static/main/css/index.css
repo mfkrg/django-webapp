@@ -21,6 +21,22 @@ th {
     text-transform: uppercase;
 }
 
+.table_cart{
+    margin-top: 50px;
+}
+
+.pip{
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: black; /* add red color to the text */
+        border: 1px solid #181818; /* add border to circle the text */
+        border-radius: 50%; /* make the border circle-shaped */
+        padding: 5px; /* add some padding to the border */
+      }
+
 td {
     border-bottom: 1px solid #ddd;
 }

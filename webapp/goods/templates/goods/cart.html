@@ -4,12 +4,31 @@
 
 {% block content %}
 
-<div class="grid">
-    {% for cart in carts %}
-        {{ cart.good.title }}
-        {{ cart.quantity }}
-        {{ cart.good.cost }}
-    {% endfor %}
-</div>
+<table class="table_cart">
+    <thead>
+        <tr>
+          <th>Title</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+    <tbody>
+        {% for cart in carts %}
+        <tr>
+          <td>{{ cart.good.title }}</td>
+          <td>{{ cart.quantity }}</td>
+          <td>{{ cart.good.cost }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot class="pip">
+        <tr>
+          <td>Total</td>
+          <td>6</td>
+          <td>$60.00</td>
+        </tr>
+      </tfoot>
+</table>
 
 {% endblock %}
+
