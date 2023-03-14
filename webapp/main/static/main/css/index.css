@@ -177,6 +177,16 @@ align-items: center;
 	}
 }
 
+.btn-add-to-cart{
+    background-color: #008CBA;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+}
+
 .as {
     z-index:-1;
     position: absolute;
