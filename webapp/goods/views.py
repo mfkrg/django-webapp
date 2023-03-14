@@ -6,6 +6,10 @@ def goods_catalog(request):
     goods = Goods.objects.all()
     return render(request, 'goods/goods_catalog.html', {'goods':goods})
 
+def cart(request):
+    cart = Cart.objects.all()
+    return render(request, 'goods/cart.html', {'carts':cart})
+
 def add_to_cart(request, good_id):
     good = Goods.objects.get(id=good_id)
     carts = Cart.objects.filter(user=request.user, good=good)

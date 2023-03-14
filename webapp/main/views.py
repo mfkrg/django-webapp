@@ -7,9 +7,6 @@ from django.contrib.auth.forms import AuthenticationForm
 def index(request):
     return render(request, 'main/index.html')
 
-def cart(request):
-    return render(request, 'main/cart.html')
-
 def catalog(request):
     return render(request, 'main/catalog.html')
 

@@ -11,9 +11,9 @@
                 <h3>{{ el.title }}</h3>
                 <p>{{ el.cost }} руб.</p>
                 <img class="goods_image" src="{{ el.image.url }}" width="300">
-                <a class="btn-add-to-cart" href="{% url 'add_to_cart' good_id=el.id %}"></a>
+                <a class="btn-add-to-cart" href="{% url 'add_to_cart' good_id=el.id %}">Добавить в корзину</a>
             </div>
-        {% endfor %}
+            {% endfor %}
         </div>
         <div class ="filter-menu">
             <h3 style="color: white; font-size: 22px; font-weight: bold;">Фильтр товаров</h3>

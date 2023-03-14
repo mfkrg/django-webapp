@@ -2,6 +2,38 @@ body {
     background: #2c2c2c;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+#total-cost {
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 200px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
 .topnav {
     /* background-color: #181818; */
     overflow: hidden;
@@ -56,6 +88,12 @@ body {
 
 .btn-outline-info-login{
     text-align: center;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+}
+
+.btn-add-to-cart{
     color: white;
     border: 2px solid #ffffff;
     border-radius: 12px;

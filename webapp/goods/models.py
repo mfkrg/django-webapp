@@ -25,4 +25,4 @@ class Cart(models.Model):
     created_timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'Корзина для {self.user.email} | Продукт: {self.good.title}'
+        return f'Корзина для {self.user.username} | Продукт: {self.good.title} | Количество: {self.quantity}'
