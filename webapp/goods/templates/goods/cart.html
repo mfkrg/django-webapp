@@ -18,6 +18,11 @@
           <td>{{ cart.good.title }}</td>
           <td>{{ cart.quantity }}</td>
           <td>{{ cart.good.cost }}</td>
+            <td>
+              <a href="{% url 'cart_remove' cart.id %}">
+                <i class="fas fa-trash"></i>
+            </a>
+            </td>
         </tr>
         {% endfor %}
       </tbody>

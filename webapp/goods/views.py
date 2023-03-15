@@ -23,3 +23,12 @@ def add_to_cart(request, good_id):
         cart.save()
 
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+def remove_from_cart(request, good_id):
+    pass
+
+def cart_remove(request, cart_id):
+    cart = Cart.objects.get(id=cart_id)
+    cart.delete()
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
