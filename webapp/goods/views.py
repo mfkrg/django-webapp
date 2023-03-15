@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect
 from .models import Goods, Cart
-from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 def goods_catalog(request):
     goods = Goods.objects.all()
@@ -23,7 +22,6 @@ def add_to_cart(request, good_id):
         cart.save()
 
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
-
 
 def cart_remove(request, cart_id):
     cart = Cart.objects.get(id=cart_id)
