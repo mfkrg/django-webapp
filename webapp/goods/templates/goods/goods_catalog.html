@@ -11,7 +11,9 @@
                 <h3>{{ el.title }}</h3>
                 <p>{{ el.cost }} руб.</p>
                 <img class="goods_image" src="{{ el.image.url }}" width="300">
-                <a class="btn-add-to-cart" href="{% url 'add_to_cart' good_id=el.id %}">Добавить в корзину</a>
+                <div class="btn-cont">
+                    <a class="btn-add-to-cart" href="{% url 'add_to_cart' good_id=el.id %}">Добавить в корзину</a>
+                </div>
             </div>
             {% endfor %}
         </div>

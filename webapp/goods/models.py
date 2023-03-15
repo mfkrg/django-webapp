@@ -26,3 +26,6 @@ class Cart(models.Model):
 
     def __str__(self):
         return f'Корзина для {self.user.username} | Продукт: {self.good.title} | Количество: {self.quantity}'
+
+    def sum(self):
+        return self.good.cost * self.quantity

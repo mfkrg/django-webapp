@@ -9,7 +9,12 @@ def goods_catalog(request):
 
 def cart(request):
     cart = Cart.objects.filter(user=request.user)
-    return render(request, 'goods/cart.html', {'carts':cart})
+    total_sum = 0
+    total_quantity = 0
+    for carts in cart:
+        total_sum = total_sum + carts.sum()
+        total_quantity = total_quantity + carts.quantity
+    return render(request, 'goods/cart.html', {'carts':cart, 'cart':cart, 'total_sum':total_sum, 'total_quantity':total_quantity})
 
 def add_to_cart(request, good_id):
     good = Goods.objects.get(id=good_id)
@@ -24,11 +29,8 @@ def add_to_cart(request, good_id):
 
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-def remove_from_cart(request, good_id):
-    pass
 
 def cart_remove(request, cart_id):
     cart = Cart.objects.get(id=cart_id)
     cart.delete()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
-

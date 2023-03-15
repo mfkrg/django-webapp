@@ -7,9 +7,11 @@
 <table class="table_cart">
     <thead>
         <tr>
-          <th>Title</th>
-          <th>Quantity</th>
-          <th>Cost</th>
+          <th>Название</th>
+          <th>Количество</th>
+          <th>Цена</th>
+            <th>Сумма</th>
+            <th>Действия</th>
         </tr>
       </thead>
     <tbody>
@@ -18,6 +20,7 @@
           <td>{{ cart.good.title }}</td>
           <td>{{ cart.quantity }}</td>
           <td>{{ cart.good.cost }}</td>
+            <td>{{ cart.sum }} руб.</td>
             <td>
               <a href="{% url 'cart_remove' cart.id %}">
                 <i class="fas fa-trash"></i>
@@ -28,9 +31,10 @@
       </tbody>
       <tfoot class="pip">
         <tr>
-          <td>Total</td>
-          <td>6</td>
-          <td>$60.00</td>
+          <td>Итого</td>
+          <td>{{ total_quantity }}</td>
+          <td></td>
+            <td>{{ total_sum }} руб.</td>
         </tr>
       </tfoot>
 </table>
