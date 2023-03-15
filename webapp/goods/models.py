@@ -27,5 +27,14 @@ class Cart(models.Model):
     def __str__(self):
         return f'Корзина для {self.user.username} | Продукт: {self.good.title} | Количество: {self.quantity}'
 
+
     def sum(self):
         return self.good.cost * self.quantity
+
+    def total_sum(self):
+        carts = Cart.objects.filter(user=self.user)
+        return sum(cart.sum() for cart in carts)
+
+    def total_quantity(self):
+        carts = Cart.objects.filter(user=self.user)
+        return sum(cart.quantity for cart in carts)
