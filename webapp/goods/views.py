@@ -9,11 +9,8 @@ def goods_catalog(request):
 
 def cart(request):
     cart = Cart.objects.filter(user=request.user)
-    total_sum = 0
-    total_quantity = 0
-    for carts in cart:
-        total_sum = total_sum + carts.sum()
-        total_quantity = total_quantity + carts.quantity
+    total_sum = sum(carts.sum() for carts in cart)
+    total_quantity = sum(carts.quantity for carts in cart)
     return render(request, 'goods/cart.html', {'carts':cart, 'cart':cart, 'total_sum':total_sum, 'total_quantity':total_quantity})
 
 def add_to_cart(request, good_id):
